@@ -2,7 +2,7 @@
 
 session_start(); //Start session
  
-//Check if the user is already logged in, if yes then redirect him to welcome page
+//Check if the user is already logged in, if yes then redirect to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
 {
     header("location: welcome.php");
@@ -35,12 +35,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") //process login
         $password = trim($_POST["password"]);
     }
     
-    // Validate credentials
     if(empty($username_err) && empty($password_err)){
         $sql = "SELECT id, username, password FROM users WHERE username = :username"; //sql code
         
         if($stmt = $pdo_connection->prepare($sql)){
-            // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
             
             $param_username = trim($_POST["username"]); // Set parameters
@@ -95,8 +93,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") //process login
 </head>
 <body>
     <div class="wrapper">
-        <h2>Assignment Tracker Login</h2>
-        <p>Please fill in your ID & Password.</p>
+        <h2>Assignment Tracker Login</h2> <!--Start login form-->
+        <p>Please fill in your ID & Password.</p><br>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>ID</label>

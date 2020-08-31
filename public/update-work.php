@@ -72,10 +72,6 @@
 
 <?php include "templates/header.php"; ?>
 
-<?php if (isset($_POST['submit']) && $statement) : ?>
-	<p>Assignment successfully updated.</p>
-<?php endif; ?>
-
 <!DOCTYPE html> 
 <html lang="en"> <!-- Start Front-end code -->
 <head>
@@ -90,6 +86,10 @@
 <body>
 <div class="wrapper">
 <h2>Edit a work</h2>
+<?php if (isset($_POST['submit']) && $statement) : ?>
+<br><br>
+	<p style="color:blue">Assignment successfully updated.</p>
+<?php endif; ?>
 <br>
 <!--start form-->
 <form method="post">
@@ -97,16 +97,16 @@
     <label for="id">ID</label>
     <input type="text" name="id" id="id" class="form-control" value="<?php echo escape($assignment['id']); ?>" >
     
-    <label for="unitid">Artist Name</label>
+    <label for="unitid">Unit ID</label>
     <input type="text" name="unitid" id="unitid" class="form-control" value="<?php echo escape($assignment['unitid']); ?>">
 
-    <label for="unitname">Work Title</label>
+    <label for="unitname">Unit Name</label>
     <input type="text" name="unitname" id="unitname" class="form-control" value="<?php echo escape($assignment['unitname']); ?>">
 
-    <label for="asname">Work Date</label>
+    <label for="asname">Assessment Name</label>
     <input type="text" name="asname" id="asname" class="form-control" value="<?php echo escape($assignment['asname']); ?>">
 
-    <label for="duedate">Work Type</label>
+    <label for="duedate">Due date</label>
     <input type="text" name="duedate" id="duedate" class="form-control" value="<?php echo escape($assignment['duedate']); ?>">
     
     <label for="date">Work Date</label>

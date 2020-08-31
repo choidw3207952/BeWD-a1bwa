@@ -22,20 +22,19 @@
 ?>
 
 <?php include "templates/header.php"; ?>
+<br>
 
-
-<h2>Results</h2>
+<h2>Information Update Center</h2>
 <p>Select the assignment you want to modify</p> <br>
 
 <?php foreach($result as $row) { ?> <!--reading result loop-->
 
 <p>
-    ID: <?php echo $row['id']; ?><br> 
-    Unit ID: <?php echo $row['unitid']; ?><br>
-    Unit name: <?php echo $row['unitname']; ?><br>
-    Assignment name: <?php echo $row['asname']; ?><br> 
-    Due date: <?php echo $row['duedate']; ?><br><br>
-    <a href='update-work.php?id=<?php echo $row['id']; ?>'>Edit</a> <!--Edit button-->
+    <?php echo $row['unitid']; ?> <?php echo $row['unitname']; ?> <br><br>
+    <strong>Assignment Name: </strong><?php echo $row['asname']; ?> <br><br>
+    <Strong>Due date:</strong> <?php echo $row['duedate']; ?><br><br>
+    <a href='update-work.php?id=<?php echo $row['id']; ?>'>Edit</a>&ensp;&ensp; <!--Edit button-->
+    <a href='delete.php?id=<?php echo $row['id']; ?>'>Delete</a> <!--Delete button-->
 </p>
 
 <hr>

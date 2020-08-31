@@ -45,19 +45,17 @@ if (isset($_POST['submit']))
 
         if ($result && $statement->rowCount() > 0) { ?> 
 
-<h2>Results</h2> <br>
+<h2>Coming Assignment List</h2> <br><br>
 
 <?php 
                 foreach($result as $row) { //loop result
             ?>
 
-<p>
-    ID: <?php echo $row["id"]; ?><br>
-    Unit ID: <?php echo $row['unitid']; ?><br>
-    Unit Name: <?php echo $row['unitname']; ?><br>
-    Assignment Name: <?php echo $row['asname']; ?><br> 
-    Due date: <?php echo $row['duedate']; ?><br>
-</p>
+<h4> <!--show assignment list-->
+    <strong>Unit: </strong> <?php echo $row['unitid']; ?> <?php echo $row['unitname']; ?> <br><br>
+    <strong>Assignment Name: </strong><p style="color:blue"><?php echo $row['asname']; ?></p>
+    <strong>Due date: </strong> <p style="color:red"><?php echo $row['duedate']; ?></p>
+</h4>
 
 <hr>
 

@@ -60,25 +60,10 @@
 </head>
 <body>
 <div class="wrapper">
-<h2>Delete a user</h2>
 
-<?php if ($success) echo $success; ?>
+<h4><?php if ($success) echo $success; ?></h4> <br>
+<a href="welcome.php">Go home</a> <!--Go welcome.html-->
 
-<!-- This is a loop, which will loop through each result in the array -->
-<?php foreach($result as $row) { ?>
-
-<p>
-    ID: <?php echo escape($row['id']); ?><br> 
-    Unit ID: <?php echo $row['unitid']; ?><br> 
-    Unit name: <?php echo $row['unitname']; ?><br> 
-    Assignment Name: <?php echo $row['asname']; ?><br> 
-    Due date: <?php echo $row['duedate']; ?><br><br>
-    <a href='delete.php?id=<?php echo $row['id']; ?>'>Delete</a>
-</p>
-
-<hr>
-<?php }; //close the foreach
-?>
 </div>
 </body>
 </html>

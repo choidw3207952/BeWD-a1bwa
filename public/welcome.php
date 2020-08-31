@@ -36,9 +36,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){ //Check use
         <br><br>
         <div style="border:2px solid DodgerBlue;">
         <h4><strong>Data Management</strong></h4><br>
-        <a href="create.php" class="btn btn-primary">create new</a> &ensp;&ensp;&ensp;&ensp;
-        <a href="update.php" class="btn btn-info">update list</a> &ensp;&ensp;&ensp;&ensp;
-        <a href="delete.php" class="btn btn btn-danger">Delete list</a> &ensp;&ensp;&ensp;&ensp; <br><br>
+        <a href="create.php" class="btn btn-primary">Create new</a> &ensp;&ensp;&ensp;&ensp;
+        <a href="update.php" class="btn btn-info">Edit list</a> &ensp;&ensp;&ensp;&ensp;<br><br>
         </div>
     </p>
 </body>
