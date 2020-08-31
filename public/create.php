@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) //when submit button click
 </head>
 <body>
 <div class="wrapper">
-<h2>Add a work</h2><br>
+<h2>Add Assignment</h2><br>
 
 <?php if (isset($_POST['submit']) && $statement) { ?>
 <p>Assignment successfully added.</p> <!--show message when success add assignment--> 

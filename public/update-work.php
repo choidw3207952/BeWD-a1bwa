@@ -95,22 +95,22 @@
 <form method="post">
     
     <label for="id">ID</label>
-    <input type="text" name="id" id="id" class="form-control" value="<?php echo escape($assignment['id']); ?>" >
+    <input type="text" name="id" id="id" class="form-control" value="<?php echo escape($assignment['id']); ?>" ><br>
     
     <label for="unitid">Unit ID</label>
-    <input type="text" name="unitid" id="unitid" class="form-control" value="<?php echo escape($assignment['unitid']); ?>">
+    <input type="text" name="unitid" id="unitid" class="form-control" value="<?php echo escape($assignment['unitid']); ?>"><br>
 
     <label for="unitname">Unit Name</label>
-    <input type="text" name="unitname" id="unitname" class="form-control" value="<?php echo escape($assignment['unitname']); ?>">
+    <input type="text" name="unitname" id="unitname" class="form-control" value="<?php echo escape($assignment['unitname']); ?>"><br>
 
     <label for="asname">Assessment Name</label>
-    <input type="text" name="asname" id="asname" class="form-control" value="<?php echo escape($assignment['asname']); ?>">
+    <input type="text" name="asname" id="asname" class="form-control" value="<?php echo escape($assignment['asname']); ?>"><br>
 
     <label for="duedate">Due date</label>
-    <input type="text" name="duedate" id="duedate" class="form-control" value="<?php echo escape($assignment['duedate']); ?>">
+    <input type="text" name="duedate" id="duedate" class="form-control" value="<?php echo escape($assignment['duedate']); ?>"><br>
     
-    <label for="date">Work Date</label>
-    <input type="text" name="date" id="date" class="form-control" value="<?php echo escape($assignment['date']); ?>">
+    <label for="date">Added date</label>
+    <input type="text" name="date" id="date" class="form-control" value="<?php echo escape($assignment['date']); ?>"><br>
 
     <br>
     <input type="submit" name="submit" value="Save" class="btn btn-success"> <!--submit button-->
