@@ -74,4 +74,3 @@ if (isset($_POST['submit']))
 </body>
 </html>
 
-<?php include "templates/footer.php"; ?>

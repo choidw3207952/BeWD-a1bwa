@@ -42,3 +42,5 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){ //Check use
     </p>
 </body>
 </html>
+
+<?php include "templates/footer.php"; ?>
